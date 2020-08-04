@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+<bean id = "memberRegisterService" class ="main.service.MemberRegisterService">
+<constructor-arg name ="memberDao" ref = "memberDao"/>
+</bean>
+<bean id = "memberListPrinter" class = "main.service.MemberListPrinter">
+<constructor-arg name ="memberDao" ref = "memberDao"/>
+<constructor-arg name = " printer" ref = "printer"/>
+</bean>
+<bean id = "changePasswordService" class="main.service.ChangePasswordService">
+<property name="memberDao" ref =" memberDao"/>
+</bean>
+<bean id="memberInfoprinter" class="main.service.MemberInfoPrinter">
+<property name ="memberDao" ref ="memberDao"/>
+<property name = "printer" ref ="printer"/>
+</bean>
+</beans>            
